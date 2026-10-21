@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز أفق | خطوتك الأولى نحو التفوق</title>
+    <meta name="description" content="مركز أفق التعليمي في قطاع غزة - خدمات التعليم الأساسي والتأسيس الأكاديمي للغة العربية، الرياضيات، واللغة الإنجليزية ببيئة مشجعة ورسوم مناسبة.">
+    
+    <!-- Google Fonts (Cairo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ==========================================
+           1. CSS VARIABLES & BASE STYLES
+           ========================================== */
+        :root {
+            --primary: #0f172a;          /* أزرق داكن كحلي للثقة والهيبة */
+            --primary-light: #1e293b;    /* أزرق أفتح للعناصر الثانوية */
+            --accent: #f59e0b;           /* أصفر دافئ/ذهبي للتفاؤل */
+            --accent-hover: #d97706;     /* أصفر غامق للتفاعل */
+            --brand-blue: #2563eb;       /* أزرق تعليمي حيوي للأزرار والروابط */
+            --brand-blue-hover: #1d4ed8;
+            --success: #10b981;          /* أخضر ناعم للتأكيد والتواصل */
+            --success-hover: #059669;
+            --bg-light: #f8fafc;         /* خلفية ناعمة مريحة للعين */
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.08);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+            direction: rtl;
+            text-align: right;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container Layout */
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            color: var(--brand-blue);
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: rgba(37, 99, 235, 0.08);
+            padding: 6px 16px;
+            border-radius: 30px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .section-description {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Buttons Style */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-blue {
+            background-color: var(--brand-blue);
+            color: #ffffff;
+        }
+
+        .btn-blue:hover {
+            background-color: var(--brand-blue-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--brand-blue);
+            color: var(--brand-blue);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--brand-blue);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--success);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--success-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        /* ==========================================
+           2. NAVBAR
+           ========================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--accent), var(--brand-blue));
+            color: #ffffff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .logo-text span {
+            color: var(--brand-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--brand-blue);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--brand-blue);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+            background: none;
+            border: none;
+        }
+
+        /* ==========================================
+           3. HERO SECTION
+           ========================================== */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .hero-badge i {
+            color: var(--accent);
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            color: var(--brand-blue);
+            position: relative;
+        }
+
+        .hero-text {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 540px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-card-visual {
+            width: 100%;
+            max-width: 480px;
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 25px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .visual-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .visual-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #dbeafe;
+            color: var(--brand-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+
+        .visual-info h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .visual-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .visual-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .stat-box {
+            background-color: var(--bg-light);
+            padding: 15px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid #f1f5f9;
+        }
+
+        .stat-box i {
+            font-size: 1.5rem;
+            color: var(--brand-blue);
+            margin-bottom: 8px;
+        }
+
+        .stat-box h5 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-box p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .floating-badge {
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ==========================================
+           4. SERVICES SECTION
+           ========================================== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-md);
+            padding: 30px 25px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--brand-blue);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background-color: #eff6ff;
+            color: var(--brand-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .service-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .service-btn {
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+
+        /* ==========================================
+           5. WHY US SECTION
+           ========================================== */
+        .why-us {
+            background-color: #ffffff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            border-radius: var(--radius-md);
+            background: var(--bg-light);
+            border: 1px solid #f1f5f9;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            background: #ffffff;
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-color);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background-color: var(--accent);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .feature-info h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .feature-info p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           6. TARGET AUDIENCE SECTION
+           ========================================== */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .audience-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .audience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background-color: var(--brand-blue);
+        }
+
+        .audience-card.accent-border::before {
+            background-color: var(--accent);
+        }
+
+        .audience-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .audience-desc {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin-bottom: 20px;
+        }
+
+        .audience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .audience-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .audience-list li i {
+            color: var(--success);
+        }
+
+        /* ==========================================
+           7. STEPS SECTION
+           ========================================== */
+        .steps-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            position: relative;
+        }
+
+        .step-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-md);
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .step-number {
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 1.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+        }
+
+        .step-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .step-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* ==========================================
+           8. REGISTRATION FORM SECTION
+           ========================================== */
+        .registration {
+            background-color: #ffffff;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-light);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            background-color: #ffffff;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--brand-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 5px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            font-size: 0.9rem;
+            user-select: none;
+            transition: var(--transition);
+        }
+
+        .checkbox-label:hover {
+            border-color: var(--brand-blue);
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--brand-blue);
+            cursor: pointer;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .radio-label input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--brand-blue);
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            background: #fffbeeb3;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            border: 1px solid #fef3c7;
+        }
+
+        .form-note i {
+            color: var(--accent);
+            margin-top: 3px;
+        }
+
+        /* Modal / Notification Alert */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            border-radius: var(--radius-lg);
+            max-width: 500px;
+            width: 100%;
+            padding: 35px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transform: scale(0.9);
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-icon {
+            width: 70px;
+            height: 70px;
+            background: #d1fae5;
+            color: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 20px auto;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .modal-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        /* ==========================================
+           9. FAQ SECTION
+           ========================================== */
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-header {
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--primary);
+            user-select: none;
+        }
+
+        .faq-header i {
+            transition: transform 0.3s ease;
+            color: var(--brand-blue);
+        }
+
+        .faq-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 25px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.active {
+            border-color: var(--brand-blue);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-item.active .faq-header i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-body {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        /* ==========================================
+           10. CONTACT SECTION
+           ========================================== */
+        .contact {
+            background-color: #ffffff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .contact-card {
+            background-color: var(--bg-light);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: #eff6ff;
+            color: var(--brand-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin: 0 auto 15px auto;
+        }
+
+        .contact-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .contact-detail {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .contact-detail.rtl-text {
+            direction: rtl;
+        }
+
+        /* ==========================================
+           11. FOOTER
+           ========================================== */
+        .footer {
+            background-color: var(--primary);
+            color: #ffffff;
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            margin-top: 15px;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            padding-right: 5px;
+        }
+
+        .footer-bottom {
+            padding-top: 25px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.88rem;
+        }
+
+        /* ==========================================
+           12. RESPONSIVE MEDIA QUERIES
+           ========================================== */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                margin-top: 30px;
+            }
+
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar .container {
+                height: 70px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: #ffffff;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 40px 20px;
+                gap: 25px;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-btn {
+                width: 100%;
+            }
+
+            .hero-title {
+                font-size: 2.1rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+
+            .form-container {
+                padding: 25px 20px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+       1. NAVBAR
+       ========================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">مركز <span>أفق</span></div>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="قائمة التصفح">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#services" class="nav-link">خدماتنا التعليمية</a></li>
+                <li><a href="#why-us" class="nav-link">لماذا نحن؟</a></li>
+                <li><a href="#steps" class="nav-link">خطوات التسجيل</a></li>
+                <li><a href="#faq" class="nav-link">الأسئلة الشائعة</a></li>
+                <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+                <li>
+                    <a href="#register" class="btn btn-primary nav-btn">
+                        <i class="fa-solid fa-user-plus"></i> سجّل ابنك الآن
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+       2. HERO SECTION
+       ========================================== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-star"></i> التأسيس العلمي المتين في قطاع غزة
+                    </div>
+                    <h1 class="hero-title">
+                        خطوتك الأولى نحو <span>التفوق الأكاديمي</span> تبدأ من هنا
+                    </h1>
+                    <p class="hero-text">
+                        في مركز أفق التعليمي، نساعد أبناءكم على تأسيس مهاراتهم وتقوية مستواهم في المواد الأساسية، من خلال تعليم مبسط ومتابعة حثيثة بأسعار تراعي ظروف الأهالي.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#register" class="btn btn-primary">
+                            <i class="fa-solid fa-file-pen"></i> سجّل ابنك الآن
+                        </a>
+                        <a href="#services" class="btn btn-outline">
+                            <i class="fa-solid fa-book-open"></i> تعرّف على خدماتنا
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-card-visual">
+                        <div class="visual-header">
+                            <div class="visual-avatar">
+                                <i class="fa-solid fa-child-reaching"></i>
+                            </div>
+                            <div class="visual-info">
+                                <h4>بيئة تعليمية دافئة</h4>
+                                <p>متابعة فردية لبناء شخصية متعلمة</p>
+                            </div>
+                        </div>
+                        <div class="visual-stats">
+                            <div class="stat-box">
+                                <i class="fa-solid fa-book-bookmark"></i>
+                                <h5>تأسيس شامل</h5>
+                                <p>من الصفر حتى الإتقان</p>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fa-solid fa-heart-circle-check"></i>
+                                <h5>رسوم مناسبة</h5>
+                                <p>تراعي الظروف الحالية</p>
+                            </div>
+                        </div>
+                        <div class="floating-badge">
+                            <i class="fa-solid fa-award"></i> كادر تعليمي متميز
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       3. SERVICES SECTION
+       ========================================== -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">موادنا ورسالتنا</span>
+                <h2 class="section-title">خدمات تعليمية تناسب احتياجات أبنائكم</h2>
+                <p class="section-description">نقدم برامج مركزة تهدف إلى ترميم الفجوات التعليمية وبناء قدرات الطالب الذاتية بثقة وإتقان.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <h3 class="service-title">التعليم الأساسي والتأسيس</h3>
+                        <p class="service-desc">بناء المهارات الأساسية لدى الأطفال الذين يحتاجون للبدء من الصفر، ومساعدتهم على اكتساب مهارات القراءة والحساب الأولية.</p>
+                    </div>
+                    <button class="btn btn-outline service-btn" onclick="selectService('التأسيس الشامل (من الصفر)')">
+                        استفسر عن المادة <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <h3 class="service-title">اللغة العربية</h3>
+                        <p class="service-desc">تقوية شاملة في القراءة السليمة، الكتابة والإملاء، ضبط القواعد النحوية، وتنمية مهارات التعبير والفهم القرائي.</p>
+                    </div>
+                    <button class="btn btn-outline service-btn" onclick="selectService('اللغة العربية')">
+                        استفسر عن المادة <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="service-title">الرياضيات</h3>
+                        <p class="service-desc">تبسيط المفاهيم الرياضية والهندسية، وتقوية مهارات الحساب الذهني والسريع، والفهم العميق لخطوات حل المسائل.</p>
+                    </div>
+                    <button class="btn btn-outline service-btn" onclick="selectService('الرياضيات')">
+                        استفسر عن المادة <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon">
+                            <i class="fa-solid fa-font"></i>
+                        </div>
+                        <h3 class="service-title">اللغة الإنجليزية</h3>
+                        <p class="service-desc">تعلم الحروف والمفردات اليومية، وقواعد النطق القراءة والكتابة، والقواعد الأساسية بطرق مبسطة ومحببة للأطفال.</p>
+                    </div>
+                    <button class="btn btn-outline service-btn" onclick="selectService('اللغة الإنجليزية')">
+                        استفسر عن المادة <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       4. WHY US SECTION
+       ========================================== -->
+    <section class="section-padding why-us" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">معايير عملنا</span>
+                <h2 class="section-title">لماذا تختار مركز أفق؟</h2>
+                <p class="section-description">نلتزم بتقديم تجربة تعليمية صادقة وحقيقية تضع مصلحة الطالب وولي الأمر في المقدمة.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="feature-info">
+                        <h4>الاهتمام بالتأسيس الأكاديمي</h4>
+                        <p>نركز على فهم الجذور والقواعد الأساسية للمواد وليس التلقين الحفظي فقط.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                    <div class="feature-info">
+                        <h4>مراعاة الفروق الفردية</h4>
+                        <p>نراعي نمط تعلم كل طالب وقدراته ونعمل معه بالسرعة التي تناسبه لضمان الفهم.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="feature-info">
+                        <h4>متابعة التقدم المستمر</h4>
+                        <p>تقييم دوري مستمر لمستوى الطالب لمعرفة مدى تطوره ومعالجة نقاط الضعف فوراً.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-face-smile"></i></div>
+                    <div class="feature-info">
+                        <h4>بيئة تعليمية مشجعة</h4>
+                        <p>مساحة آمنة ومريحة نفسياً تحفز الأطفال على الاستفسار وحب التعلم دون خوف.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <div class="feature-info">
+                        <h4>رسوم تعليمية مناسبة</h4>
+                        <p>تحديد رسوم رمزية وميسرة تأخذ بعين الاعتبار الواقع الاقتصادي الصعب للأهالي.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-comments"></i></div>
+                    <div class="feature-info">
+                        <h4>التواصل مع أولياء الأمور</h4>
+                        <p>إبقاء ولي الأمر في صورة مستمرة حول سلوك الطالب الأكاديمي والمدى الذي وصل إليه.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       5. TARGET AUDIENCE SECTION
+       ========================================== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">من نستهدف؟</span>
+                <h2 class="section-title">لكل طالب بداية يستحقها</h2>
+                <p class="section-description">صُممت برامجنا لتلبي الاحتياجات المختلفة للطلاب في مراحلهم التعليمية الأولى.</p>
+            </div>
+
+            <div class="audience-grid">
+                <div class="audience-card">
+                    <h3 class="audience-title">
+                        <i class="fa-solid fa-child" style="color: var(--brand-blue);"></i> أطفال مرحلة التأسيس
+                    </h3>
+                    <p class="audience-desc">الطلاب والأطفال الذين يحتاجون إلى بناء المهارات الأساسية في القرائية والحسابية من البداية لتسليمهم مفاتيح التعلم.</p>
+                    <ul class="audience-list">
+                        <li><i class="fa-solid fa-circle-check"></i> الأطفال المقتربين من دخول المدارس.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> من يعانون من صعوبة في التعرف على الحروف والأرقام.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> من يحتاجون لتنمية المهارات الحركية الدقيقة بالكتابة.</li>
+                    </ul>
+                </div>
+
+                <div class="audience-card accent-border">
+                    <h3 class="audience-title">
+                        <i class="fa-solid fa-user-graduate" style="color: var(--accent);"></i> طلاب الصفوف الأساسية
+                    </h3>
+                    <p class="audience-desc">الطلاب المنتظمون في المدارس والذين يحتاجون لدروس تقوية إضافية لرفع مستواهم في المواد التي يواجهون فيها صعوبة.</p>
+                    <ul class="audience-list">
+                        <li><i class="fa-solid fa-circle-check"></i> طلاب اللغة العربية الذين يواجهون ضعفاً بالإملاء والقواعد.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> طلاب الرياضيات الراغبين بفهم أعمق للمسائل.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> طلاب اللغة الإنجليزية الراغبين بتحسين القراءة والمفردات.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       6. STEPS SECTION
+       ========================================== -->
+    <section class="section-padding" id="steps" style="background-color: #ffffff;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">آلية الالتحاق</span>
+                <h2 class="section-title">خطوات التسجيل البسيطة</h2>
+                <p class="section-description">أربع خطوات سهلة تبدأ بها رحلة ابنك التعليمية معنا.</p>
+            </div>
+
+            <div class="steps-wrapper">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">تعبئة النموذج</h3>
+                    <p class="step-desc">قم بتعبئة بيانات ولي الأمر والطالب عبر النموذج الإلكتروني في الأسفل.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">تحديد المواد</h3>
+                    <p class="step-desc">اختر المادة أو المواد التي يحتاج ابنك إلى التقوية أو التأسيس فيها.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">التواصل والمتابعة</h3>
+                    <p class="step-desc">تتواصل إدارة المركز معكم لتأكيد طلب التسجيل واستكمال التفاصيل.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">تأكيد المواعيد</h3>
+                    <p class="step-desc">الاتفاق على المواعيد والجدول الزمني والرسوم ثم البدء مباشرة في الدراسة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       7. REGISTRATION FORM SECTION
+       ========================================== -->
+    <section class="section-padding registration" id="register">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">الانضمام للمركز</span>
+                <h2 class="section-title">نموذج تسجيل الطالب</h2>
+                <p class="section-description">يرجى ملء البيانات بدقة وسيتم التواصل معكم مباشرة عبر الواتساب أو الهاتف لتأكيد التسجيل.</p>
+            </div>
+
+            <div class="form-container">
+                <form id="studentRegisterForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-grid">
+                        <!-- Student Name -->
+                        <div class="form-group">
+                            <label class="form-label" for="studentName">اسم الطالب رباعي *</label>
+                            <input type="text" id="studentName" class="form-control" placeholder="مثال: محمد أحمد علي" required>
+                        </div>
+
+                        <!-- Parent Name -->
+                        <div class="form-group">
+                            <label class="form-label" for="parentName">اسم ولي الأمر *</label>
+                            <input type="text" id="parentName" class="form-control" placeholder="مثال: أحمد علي" required>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label class="form-label" for="phone">رقم الهاتف / الواتساب *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="059XXXXXXX" required>
+                        </div>
+
+                        <!-- Class Level -->
+                        <div class="form-group">
+                            <label class="form-label" for="grade">الصف الدراسي / المستوى *</label>
+                            <select id="grade" class="form-control" required>
+                                <option value="" disabled selected>اختر المستوى الدراسي...</option>
+                                <option value="مرحلة رياض الأطفال / تمهيدي">مرحلة التأسيس</option>
+                                <option value="الصف الأول الابتدائي">الصف الأول الابتدائي</option>
+                                <option value="الصف الثاني الابتدائي">الصف الثاني الابتدائي</option>
+                                <option value="الصف الثالث الابتدائي">الصف الثالث الابتدائي</option>
+                                <option value="الصف الرابع الابتدائي">الصف الرابع الابتدائي</option>
+                                <option value="الصف الخامس الابتدائي">الصف الخامس الابتدائي</option>
+                                <option value="الصف السادس الابتدائي">الصف السادس الابتدائي</option>
+                                <option value="مستوى آخر">مستوى آخر</option>
+                            </select>
+                        </div>
+
+                        <!-- Selected Subjects -->
+                        <div class="form-group full-width">
+                            <label class="form-label">المواد المطلوب التسجيل فيها (يمكن اختيار أكثر من مادة) *</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="subjects" value="التأسيس الشامل (من الصفر)">
+                                    <span>التأسيس الشامل (من الصفر)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="subjects" value="اللغة العربية">
+                                    <span>اللغة العربية</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="subjects" value="الرياضيات">
+                                    <span>الرياضيات</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="subjects" value="اللغة الإنجليزية">
+                                    <span>اللغة الإنجليزية</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Need Basic Foundation? -->
+                        <div class="form-group full-width">
+                            <label class="form-label">هل يحتاج الطالب إلى تأسيس من الصفر؟</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="needFoundation" value="نعم" checked>
+                                    <span>نعم، يحتاج تأسيس من الصفر</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="needFoundation" value="لا">
+                                    <span>لا، تقوية ومتابعة دراسية فقط</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="form-group full-width">
+                            <label class="form-label" for="notes">ملاحظات إضافية (اختياري)</label>
+                            <textarea id="notes" class="form-control" rows="3" placeholder="أذكر أي تفاصيل خاصة بمستوى الطالب أو أوقات تناسبك..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-blue" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                                <i class="fa-solid fa-paper-plane"></i> إرسال طلب التسجيل
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="form-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div>تنبيه: بعد إرسال الطلب، يمكنك فتح تطبيق الواتساب المباشر لإرسال البيانات للإدارة لضمان أولوية التسجيل.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Alert -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="modal-title">تم تقديم الطلب بنجاح!</h3>
+            <p class="modal-text">نشكرك على اختيار مركز أفق التعليمي. لقد تم تسجيل البيانات بنجاح، ويمكنك الآن تحويل البيانات مباشرة إلى إدارة المركز عبر الواتساب لتأكيد حجز مكان الطالب.</p>
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-whatsapp" id="whatsappSendBtn">
+                    <i class="fa-brands fa-whatsapp"></i> إرسال عبر الواتساب الآن
+                </button>
+                <button class="btn btn-outline" onclick="closeModal()">إغلاق Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       8. FAQ SECTION
+       ========================================== -->
+    <section class="section-padding" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">إجابات وتوضيحات</span>
+                <h2 class="section-title">الأسئلة الشائعة</h2>
+                <p class="section-description">استفسارات يتكرر طرحها من أولياء الأمور حول طبيعة العمل بالمركز.</p>
+            </div>
+
+            <div class="faq-wrapper">
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>ما المواد التي يقدمها المركز؟</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        يقدم المركز برنامج التأسيس الشامل للأطفال، بالإضافة إلى تقوية مخصصة في مواد: اللغة العربية (قراءة وكتابة وإملاء وقواعد)، الرياضيات (حساب ومفردات ومسائل)، واللغة الإنجليزية (حروف وقراءة وقواعد أساسية).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>هل يوجد برنامج خاص بالتأسيس من الصفر؟</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        نعم، لدينا مسار متخصص موجه للأطفال الجدد أو الذين يعانون من ضعف شديد في مبادئ القراءة والحساب، حيث يتم التعامل معهم بخطوات تدريجية تناسب قدرتهم.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>كيف يمكنني تسجيل ابني في المركز؟</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        يمكنك تعبئة نموذج التسجيل الإلكتروني المتوفر في هذه الصفحة، أو التواصل مباشرة عبر أرقام الواتساب المتاحة في قسم التواصل.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>كيف أعرف الرسوم الدراسية المحددة؟</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        تتحدد الرسوم بناءً على عدد المواد والمستوى المطلوب، وحرصاً منا على مراعاة ظروف الأهالي في قطاع غزة، فإن الرسوم مدروسة ورمزية للغاية، وسيتم تزويدكم بها مباشرة فور التواصل.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <span>هل يمكن التسجيل في أكثر من مادة بنفس الوقت؟</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        نعم بالتأكيد، يمكنك اختيار مادة واحدة أو عدة مواد حسب حاجة الطالب وتوفر المواعيد المناسبة لجدوله.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       9. CONTACT SECTION
+       ========================================== -->
+    <section class="section-padding contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">يسعدنا تواصلكم</span>
+                <h2 class="section-title">تواصل مع إدارة المركز</h2>
+                <p class="section-description">نحن هنا للإجابة عن كافة استفساراتكم ومساعدتكم في اختيار المسار الأفضل لأبنائكم.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="contact-title">العنوان والموقع</h3>
+                    <p class="contact-detail rtl-text">مخيم طيور الشمس. بجوار محطة ايتا. خانيونس، قطاع غزة</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="contact-title">رقم الهاتف</h3>
+                    <p class="contact-detail">+970 59 2147679</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon" style="background-color: #d1fae5; color: var(--success);">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="contact-title">تواصل عبر الواتساب</h3>
+                    <p class="contact-detail">+970 59 2147679</p>
+                    <a href="https://wa.me/970592147679" target="_blank" class="btn btn-whatsapp" style="width: 100%; margin-top: 10px;">
+                        <i class="fa-brands fa-whatsapp"></i> مراسلة فورية
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       10. FOOTER
+       ========================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="color: #ffffff;">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="logo-text">مركز <span>أفق</span></div>
+                    </div>
+                    <p>مركز تعليمي خاص يستهدف الطلاب في قطاع غزة لمساعدتهم على تأسيس مهاراتهم وقدراتهم الأكاديمية ببيئة تربوية مشجعة ورسوم مناسبة.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا التعليمية</a></li>
+                        <li><a href="#why-us">لماذا مركزنا؟</a></li>
+                        <li><a href="#steps">خطوات التسجيل</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">المساعدة والتواصل</h4>
+                    <ul class="footer-links">
+                        <li><a href="#register">نموذج التسجيل</a></li>
+                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                        <li><a href="#contact">معلومات الاتصال</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>مركز أفق التعليمي &copy; <span id="yearSpan"></span> — معاً نحو تأسيس أقوى ومستقبل أفضل.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+       11. JAVASCRIPT LOGIC
+       ========================================== -->
+    <script>
+        // Set current year in footer
+        document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+        // Navbar Mobile Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburger.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu on nav link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').className = 'fa-solid fa-bars';
+            });
+        });
+
+        // FAQ Accordion Toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all faq items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // If it wasn't active before, open it
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Select Service from Card Buttons directly
+        function selectService(serviceName) {
+            const checkboxes = document.querySelectorAll('input[name="subjects"]');
+            checkboxes.forEach(cb => {
+                if (cb.value === serviceName) {
+                    cb.checked = true;
+                }
+            });
+
+            // Scroll to form smooth
+            document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form Submit & Client-side Validation
+        let generatedWhatsappMessage = '';
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const studentName = document.getElementById('studentName').value.trim();
+            const parentName = document.getElementById('parentName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const grade = document.getElementById('grade').value;
+            const notes = document.getElementById('notes').value.trim();
+
+            // Checkboxes
+            const selectedSubjects = Array.from(document.querySelectorAll('input[name="subjects"]:checked'))
+                                         .map(cb => cb.value);
+
+            if (selectedSubjects.length === 0) {
+                alert('يرجى اختيار مادة تعليمية واحدة على الأقل للتسجيل.');
+                return;
+            }
+
+            // Radio button
+            const needFoundation = document.querySelector('input[name="needFoundation"]:checked').value;
+
+            // Prepare WhatsApp text message
+            generatedWhatsappMessage = `*طلب تسجيل جديد - مركز أفق التعليمي*%0A%0A` +
+                `*اسم الطالب:* ${encodeURIComponent(studentName)}%0A` +
+                `*اسم ولي الأمر:* ${encodeURIComponent(parentName)}%0A` +
+                `*رقم التواصل:* ${encodeURIComponent(phone)}%0A` +
+                `*الصف / المستوى:* ${encodeURIComponent(grade)}%0A` +
+                `*المواد المطلوبة:* ${encodeURIComponent(selectedSubjects.join('، '))}%0A` +
+                `*يحتاج تأسيس من الصفر:* ${encodeURIComponent(needFoundation)}%0A` +
+                (notes ? `*ملاحظات إضافية:* ${encodeURIComponent(notes)}` : '');
+
+            // Show Success Modal
+            const modal = document.getElementById('successModal');
+            modal.classList.add('active');
+
+            // Set WhatsApp Button Link
+            const whatsappBtn = document.getElementById('whatsappSendBtn');
+            whatsappBtn.onclick = function() {
+                // Number can be updated easily here
+                const targetPhoneNumber = "970590000000"; 
+                window.open(`https://wa.me/${targetPhoneNumber}?text=${generatedWhatsappMessage}`, '_blank');
+            };
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            modal.classList.remove('active');
+            document.getElementById('studentRegisterForm').reset();
+        }
+
+        // Navbar Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+            } else {
+                navbar.style.boxShadow = '0 2px 4px rgba(0,0,0,0.04)';
+            }
+        });
+    </script>
+</body>
+</html>
